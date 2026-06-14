@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento - EdilCheck</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.paypal.com/sdk/js?client-id=BAAJ9EDCPlh9mwmtPunrmypj3QybJo0aZyMscEko38GCiPsRmC3oFAWZSfbnvsoTyTiY-HZMZqq360mcXY&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
+</head>
+<body>
+
+<header>
+    <div>
+        <h1>EDILCHECK</h1>
+        <span>Consulenza edile indipendente nel Veneto</span>
+    </div>
+    <a href="index.html" class="back-link">← Torna alla home</a>
+</header>
+
+<main>
+    <div class="card">
+        <h2>Riepilogo e Pagamento</h2>
+
+        <div class="riepilogo">
+            <div class="riepilogo-riga">
+                <span>Servizio richiesto</span>
+                <span id="nome-servizio">Verifica Preventivo / Preventivo di Massima</span>
+            </div>
+            <div class="riepilogo-riga">
+                <span>Tempi di evasione</span>
+                <span>48 ore lavorative dalla presa in carico</span>
+            </div>
+            <div class="riepilogo-riga totale">
+                <span>Totale</span>
+                <span id="prezzo-totale">€ 45,90</span>
+            </div>
+        </div>
+
+        <div class="avviso-48h">
+            <strong>⏱ Come funzionano i tempi?</strong>
+            Dopo il pagamento riceverai subito una <strong>email di conferma ricezione</strong>. I tempi lavorativi iniziano dal momento in cui il tuo fascicolo verrà <strong>ufficialmente preso in carico</strong> dal nostro esperto — riceverai una seconda email con la data e l'ora di avvio. Il report ti verrà consegnato entro quel termine.
+        </div>
+
+        <div class="paypal-box">
+            <p style="margin-bottom:1rem; font-size:0.95rem; color:#444;">Paga in modo sicuro con PayPal:</p>
+            <div id="paypal-container-V3Z6RC6MGQPLQ"></div>
+            <script>
+                paypal.HostedButtons({
+                    hostedButtonId: "V3Z6RC6MGQPLQ",
+                }).render("#paypal-container-V3Z6RC6MGQPLQ");
+            </script>
+            <p style="margin-top:1rem; font-size:0.82rem; color:#888;">Il pagamento viene elaborato in modo sicuro da PayPal.<br>EdilCheck non conserva i tuoi dati di pagamento.</p>
+        </div>
+
+        <div class="privacy-box">
+            <strong>Privacy e trattamento dei dati (GDPR)</strong><br>
+            I dati personali forniti vengono trattati da EdilCheck esclusivamente per l'erogazione del servizio richiesto, in conformità al Regolamento UE 2016/679 (GDPR) e al D.lgs. 196/2003. I dati non vengono ceduti a terzi. Puoi esercitare i tuoi diritti scrivendo a <a href="mailto:info@edilcheck.it">info@edilcheck.it</a>.
+        </div>
+    </div>
+</main>
+
+<footer>
+    &copy; 2025 EdilCheck — Consulenza edile indipendente
+</footer>
+
+</body>
+</html>
